@@ -1,0 +1,224 @@
+.student-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f8fafc;
+}
+.student-main {
+  margin-left: 240px;
+  flex: 1;
+  min-height: 100vh;
+}
+.student-content {
+  padding: 28px 32px;
+  max-width: 1200px;
+}
+
+/* Welcome banner */
+.welcome-banner {
+  background: linear-gradient(135deg, #1e40af 0%, #3182ce 60%, #63b3ed 100%);
+  border-radius: 16px;
+  padding: 28px 32px;
+  color: white;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.welcome-banner::after {
+  content: "🎓";
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 4rem;
+  opacity: 0.2;
+}
+.welcome-name {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+.welcome-sub {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+}
+
+/* Test card styles */
+.test-config-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 28px;
+  max-width: 500px;
+}
+
+/* Progress bar */
+.prog-bar-wrap {
+  background: #e2e8f0;
+  border-radius: 100px;
+  height: 8px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+.prog-bar-fill {
+  height: 100%;
+  border-radius: 100px;
+  background: linear-gradient(90deg, #3182ce, #63b3ed);
+  transition: width 0.3s;
+}
+
+/* Test question layout */
+.test-page {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 20px;
+  align-items: start;
+}
+.test-q-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.test-sidebar-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 18px;
+  position: sticky;
+  top: 20px;
+}
+.test-timer {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a202c;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 14px;
+  text-align: center;
+}
+.test-timer.warning {
+  color: #c53030;
+}
+.q-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.q-nav-btn {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 700;
+  transition: all 0.15s;
+  background: #edf2f7;
+  color: #4a5568;
+}
+.q-nav-btn.answered {
+  background: #3182ce;
+  color: white;
+}
+.q-nav-btn.current {
+  ring: 2px solid #3182ce;
+  background: #ebf8ff;
+}
+
+/* Options */
+.option-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #e2e8f0;
+  background: white;
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.88rem;
+  color: #2d3748;
+  transition: all 0.18s;
+  margin-bottom: 8px;
+}
+.option-btn:hover {
+  border-color: #3182ce;
+  background: #ebf8ff;
+}
+.option-btn.selected {
+  border-color: #3182ce;
+  background: #ebf8ff;
+  color: #1e40af;
+  font-weight: 600;
+}
+.option-btn.correct {
+  border-color: #38a169;
+  background: #f0fff4;
+  color: #276749;
+  font-weight: 700;
+}
+.option-btn.wrong {
+  border-color: #e53e3e;
+  background: #fff5f5;
+  color: #c53030;
+}
+.opt-letter {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #edf2f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.78rem;
+  flex-shrink: 0;
+}
+.option-btn.selected .opt-letter {
+  background: #3182ce;
+  color: white;
+}
+.option-btn.correct .opt-letter {
+  background: #38a169;
+  color: white;
+}
+.option-btn.wrong .opt-letter {
+  background: #e53e3e;
+  color: white;
+}
+
+/* Result screen */
+.result-score-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-weight: 800;
+}
+.result-score-circle .score-pct {
+  font-size: 2.4rem;
+  line-height: 1;
+}
+.result-score-circle .score-lbl {
+  font-size: 0.75rem;
+  margin-top: 2px;
+}
+.result-score-green {
+  background: #f0fff4;
+  border: 4px solid #38a169;
+  color: #276749;
+}
+.result-score-yellow {
+  background: #fffff0;
+  border: 4px solid #d69e2e;
+  color: #744210;
+}
+.result-score-red {
+  background: #fff5f5;
+  border: 4px solid #e53e3e;
+  color: #c53030;
+}

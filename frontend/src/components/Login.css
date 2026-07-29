@@ -1,0 +1,242 @@
+/* =====================================================
+   LOGIN PAGE — Login.css
+   ===================================================== */
+
+/* Full screen dark background */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f1b2d 0%, #1a2f4e 50%, #0f1b2d 100%);
+  font-family: "Segoe UI", sans-serif;
+  padding: 20px;
+}
+
+/* White card in the center */
+.login-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 430px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* Logo emoji */
+.login-logo {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 6px;
+}
+
+/* "Campus Placement" heading */
+.login-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 800;
+  color: #1e1b4b;
+  margin: 0 0 4px 0;
+}
+
+/* Small grey subtitle */
+.login-subtitle {
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+/* ── TABS (Student | Admin) ── */
+.login-tabs {
+  display: flex;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 22px;
+}
+
+.login-tab {
+  flex: 1;
+  padding: 10px;
+  background: #ffffff;
+  color: #6b7280;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Active/selected tab */
+.login-tab.active {
+  background: #1e1b4b;
+  color: #ffffff;
+}
+
+/* ── FORM LABELS ── */
+.login-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── INPUT BOXES ── */
+.login-input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 9px;
+  font-size: 14px;
+  outline: none;
+  margin-bottom: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.login-input:focus {
+  border-color: #6366f1;
+}
+
+/* Two inputs side by side (College+Branch, GradYear+Phone) */
+.login-row {
+  display: flex;
+  gap: 12px;
+}
+
+.login-row > div {
+  flex: 1;
+}
+
+/* ── LOGIN BUTTON (blue) ── */
+.login-btn {
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(135deg, #3b5bdb, #4c6ef5);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 4px;
+  box-shadow: 0 4px 14px rgba(59, 91, 219, 0.4);
+  transition: opacity 0.2s;
+}
+
+.login-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ── REGISTER BUTTON (purple) ── */
+.register-btn {
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+  transition: opacity 0.2s;
+}
+
+.register-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ── "New user? Register here" line ── */
+.register-line {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* The clickable "Register here" link */
+.register-link {
+  color: #4c6ef5;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  font-size: 14px;
+  padding: 0;
+}
+
+.register-link:hover {
+  color: #3b5bdb;
+}
+
+/* ── "Already have an account? Login here" line ── */
+.back-link {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.back-link-btn {
+  color: #4c6ef5;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  font-size: 14px;
+  padding: 0;
+}
+
+.back-link-btn:hover {
+  color: #3b5bdb;
+}
+
+/* ── SUCCESS / ERROR MESSAGE BOX ── */
+.login-msg {
+  padding: 11px 14px;
+  border-radius: 9px;
+  margin-bottom: 14px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.login-msg.success {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.login-msg.error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* ── Demo credentials hint ── */
+.demo-hint {
+  text-align: center;
+  font-size: 12px;
+  color: #9ca3af;
+  margin-top: 10px;
+}
+
+/* ── Register form header ── */
+.register-header {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1e1b4b;
+  margin-bottom: 4px;
+}
+
+.register-sub {
+  color: #6b7280;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
