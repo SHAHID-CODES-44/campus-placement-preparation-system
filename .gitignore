@@ -1,0 +1,12 @@
+# Backend (Python/Flask)
+backend/__pycache__/
+backend/*.pyc
+
+# Frontend (React)
+frontend/node_modules/
+frontend/build/
+
+# General
+.DS_Store
+*.log
+
